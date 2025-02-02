@@ -1,5 +1,3 @@
----
-
 # Phone Book
 
 ## Introduction
@@ -70,13 +68,13 @@ dotnet run
 Here are some screenshots showcasing the application's functionality:
 
 ### Main Menu
-![Main Menu](Images/MainMenu.png)
+![Main Menu](PhoneBook/Images/Main%20Menu.png)
 
 ### Add Contact
-![Add Contact](Images/AddContact.png)
+![Add Contact](PhoneBook/Images/Add%20Contact.png)
 
 ### Search Results
-![Search Results](Images/Search.png)
+![Search Results](PhoneBook/Images/Search.png)
 
 ### View Contacts
-![View Contacts](Images/ViewContacts.png)
+![View Contacts](PhoneBook/Images/View%20Contacts.png)
