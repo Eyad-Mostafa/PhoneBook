@@ -39,6 +39,14 @@ public static class DatabaseManager
 
         using (var context = new AppDbContext())
         {
+            if (context.Contacts.Any(c => c.PhoneNumber == contact.PhoneNumber || c.Email == contact.Email))
+            {
+                Console.ForegroundColor = ConsoleColor.Red;
+                Console.WriteLine("Contact already exists.");
+                Console.ForegroundColor = ConsoleColor.White;
+                return;
+            }
+
             context.Contacts.Add(contact);
             context.SaveChanges();
         }
@@ -185,6 +193,14 @@ public static class DatabaseManager
                 }
 
                 Console.WriteLine("Invalid category. Please enter a valid option.");
+            }
+
+            if (context.Contacts.Any(c => c.PhoneNumber == editedContact.PhoneNumber || c.Email == editedContact.Email))
+            {
+                Console.ForegroundColor = ConsoleColor.Red;
+                Console.WriteLine("Contact already exists.");
+                Console.ForegroundColor = ConsoleColor.White;
+                return;
             }
 
             Console.ForegroundColor = ConsoleColor.Green;
